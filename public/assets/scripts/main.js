@@ -1,30 +1,16 @@
-function setup(){
-    createCanvas(400,400);
-    console.log("setup");
-}
+let sketch = function(p) {
+    let x = 100;
+    let y = 100;
 
-function draw(){
+    p.setup = function() {
+        p.createCanvas(700, 410);
+    };
 
-}
+    p.draw = function() {
+        p.background(0);
+        p.fill(255);
+        p.rect(x, y, 50, 50);
+    };
+};
 
-/*
-document.addEventListener("DOMContentLoaded", function() {
-
-    const socket = io();
-
-        socket.on("server reply", (msg)=>{
-            console.log(msg)
-        })
-
-    const form = document.getElementById('form');
-    const input = document.getElementById('input');
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (input.value) {
-            socket.emit('chat message', input.value);
-            input.value = '';
-        }
-    });
-});
-*/
+let myp5 = new p5(sketch);
