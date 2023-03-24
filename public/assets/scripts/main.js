@@ -1,4 +1,15 @@
+function setup(){
+    createCanvas(400,400);
+    console.log("setup");
+}
+
+function draw(){
+
+}
+
+/*
 document.addEventListener("DOMContentLoaded", function() {
+
     const socket = io();
 
         socket.on("server reply", (msg)=>{
@@ -16,3 +27,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+*/
