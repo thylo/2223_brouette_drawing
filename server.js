@@ -13,10 +13,8 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   console.log("a user connected");
-  io.emit('server reply', 'user connected');
-  socket.on('chat message', (msg) => {
-    console.log('message: ' + msg);
-    socket.broadcast('server reply', msg.toUpperCase());
+  socket.on('user_draw', (pos) => {
+    socket.broadcast.emit('client_draw', pos);
   });
 });
 
